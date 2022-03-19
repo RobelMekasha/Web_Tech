@@ -1,0 +1,18 @@
+<!--Use <template> to hold some content that will be hidden when the page loads. Use JavaScript to display it:-->
+    <html>
+        <button onclick="Clickme()">click me</button>
+
+<template>
+  <h2>Surprise</h2>
+  
+</template>
+
+<script>
+function Clickme() {
+  var temp = document.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+    
+    </html>
